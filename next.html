@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cr&ecirc;perie de la Gare | Sartrouville</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'background-light': '#FDF5E6',
+              'primary-brown': '#6F4E37',
+              'secondary-orange': '#FFD700',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <link href="style.css?v=1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background-light font-sans text-primary-brown">
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/6F4E37/FFFFFF?text=CL" alt="Logo Crêperie Louis" class="rounded-full">
+                <span class="text-xl font-bold text-primary-brown">La Cr&ecirc;perie de la Gare</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-primary-brown hover:text-secondary-orange transition-colors">À propos</a>
+                <a href="#menu" class="text-primary-brown hover:text-secondary-orange transition-colors">Carte</a>
+                <a href="#contact" class="text-primary-brown hover:text-secondary-orange transition-colors">Contact</a>
+                <a href="https://qr.dood.com/creperie-de-la-gare" class="bg-secondary-orange text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Commander</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-primary-brown focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#about" class="text-primary-brown hover:text-secondary-orange transition-colors">À propos</a>
+                <a href="#menu" class="text-primary-brown hover:text-secondary-orange transition-colors">Carte</a>
+                <a href="#contact" class="text-primary-brown hover:text-secondary-orange transition-colors">Contact</a>
+                <a href="https://qr.dood.com/creperie-de-la-gare"  class="bg-secondary-orange text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Commander</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-white pb-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-12 py-12">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left">
+                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-primary-brown mb-4">La Cr&ecirc;perie de la Gare</h1>
+                        <p class="text-xl md:text-2xl text-gray-600 mb-6">
+                            Bienvenue à notre crêperie artisanale, où tradition et passion se rencontrent pour créer des saveurs inoubliables.
+                            Dégustez nos galettes de sarrasin et nos crêpes sucrées, préparées avec des ingrédients frais et locaux.
+                        </p>
+                        <a href="https://qr.dood.com/creperie-de-la-gare"  class="bg-primary-brown text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                            Commander
+                        </a>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
+                        <img src="https://cdn.hey.onylab.com/image/product/lacreperiedelagare/menu/w1920/IMG_3498.jpg" alt="Une carte variée : galette, crêpe, pancake, café, dessert" class="rounded-3xl shadow-2xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-background-light">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between md:space-x-8">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://cdn.hey.onylab.com/image/product/lacreperiedelagare/restaurant/salon.jpg" alt="Restaurant &agrave; l'ambiance chaleureuse" class="rounded-3xl shadow-2xl w-full h-auto">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4">À propos de nous</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Située au cœur d'Orgeval, la Crêperie Louis est l'endroit parfait pour une escapade gourmande.
+                            Notre passion pour la crêpe, un art ancestral breton, nous pousse à n'utiliser que les meilleurs produits, en privilégiant les circuits courts.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Nous vous accueillons dans une ambiance chaleureuse et familiale, idéale pour vos repas en solo, en couple ou entre amis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-16 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-8">Notre carte</h2>
+                <div class="max-w-4xl mx-auto">
+                    <a href="carte.pdf" target="_blank"><img src="/carte.png" alt="Carte du restaurant" class="rounded-3xl shadow-2xl w-full h-auto"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-background-light">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-4xl font-bold mb-4">Contact & Horaires</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Venez nous rendre visite et savourer nos délicieuses galettes et cr&ecirc;pes.
+                        </p>
+                        <div class="space-y-4 text-lg">
+                            <p><strong>Adresse : </strong>1 Place des Fusill&eacute;s, 78500 Sartrouville</p>
+                            <p><strong>Horaires : </strong></p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li>Lundi au Jeudi : 12h00 - 14h00 | 16h30 - 23h00</li>
+                                <li>Vendredi : 12h00 - 14h30 | 16h30 - 22h30</li>
+                                <li>Samedi et Dimanche : 12h00 - 23h00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="https://cdn.hey.onylab.com/image/product/lacreperiedelagare/menu/w1920/IMG_3448.jpg" alt="Pancakes aux fruits" class="rounded-3xl shadow-2xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-brown text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- Facebook link -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg class="w-8 h-8 hover:fill-white transition-colors" fill="#FFD700" viewBox="0 0 24 24">
+                        <path d="M12 2.043c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM14.004 9h-1.638v-0.662c0-0.45 0.177-0.748 0.745-0.748h0.887v-1.503l-1.314-0.001c-1.527 0-2.527 0.923-2.527 2.59v1.824h-1.666v2.103h1.666v6.23h2.106v-6.23h2.106l0.322-2.103z"></path>
+                    </svg>
+                </a>
+                <!-- Instagram link -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg class="w-8 h-8 hover:fill-white transition-colors" fill="#FFD700" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07c1.332.062 2.052.28 2.672.526a4.673 4.673 0 011.66 1.079 4.685 4.685 0 011.079 1.66c.246.62.464 1.34.526 2.672.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.332-.28 2.052-.526 2.672a4.673 4.673 0 01-1.079 1.66 4.685 4.685 0 01-1.66 1.079c-.62.246-1.34.464-2.672.526-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.332-.062-2.052-.28-2.672-.526a4.673 4.673 0 01-1.66-1.079 4.685 4.685 0 01-1.079-1.66c-.246-.62-.464-1.34-.526-2.672-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.332.28-2.052.526-2.672a4.673 4.673 0 011.079-1.66 4.685 4.685 0 011.66-1.079c.62-.246 1.34-.464 2.672-.526 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.262 0-3.676.013-4.945.07c-1.428.066-2.385.319-3.238.653-.872.336-1.62.8-2.338 1.518-.718.718-1.182 1.466-1.518 2.338-.334.853-.587 1.81-.653 3.238-.057 1.269-.07 1.683-.07 4.945s.013 3.676.07 4.945c.066 1.428.319 2.385.653 3.238.336.872.8 1.62 1.518 2.338.718.718 1.466 1.182 2.338 1.518.853.334 1.81.587 3.238.653 1.269.057 1.683.07 4.945.07s3.676-.013 4.945-.07c1.428-.066 2.385-.319 3.238-.653.872-.336 1.62-.8 2.338-1.518.718-.718 1.182-1.466 1.518-2.338.334-.853.587-1.81.653-3.238.057-1.269.07-1.683.07-4.945s-.013-3.676-.07-4.945c-.066-1.428-.319-2.385-.653-3.238-.336-.872-.8-1.62-1.518-2.338-.718-.718-1.466-1.182-2.338-1.518-.853-.334-1.81-.587-3.238-.653-1.269-.057-1.683-.07-4.945-.07zm0 1.296c1.192 0 1.792.004 3.064.062 1.272.058 1.82.254 2.222.41 1.096.438 1.816.92 2.502 1.606.686.686 1.168 1.41 1.606 2.502.156.402.352.95.41 2.222.058 1.272.062 1.872.062 3.064s-.004 1.792-.062 3.064c-.058 1.272-.254 1.82-.41 2.222-.438 1.096-.92 1.816-1.606 2.502-.686.686-1.41 1.168-2.502 1.606-.402.156-.95.352-2.222.41-1.272.058-1.872.062-3.064.062s-1.792-.004-3.064-.062c-1.272-.058-1.82-.254-2.222-.41-1.096-.438-1.816-.92-2.502-1.606-.686-.686-1.168-1.41-1.606-2.502-.156-.402-.352-.95-.41-2.222-.058-1.272-.062-1.872-.062-3.064s.004-1.792.062-3.064c.058-1.272.254-1.82.41-2.222.438-1.096.92-1.816 1.606-2.502.686-.686 1.41-1.168 2.502-1.606.402-.156.95-.352 2.222-.41 1.272-.058 1.872-.062 3.064-.062zm0 3.829c-2.13 0-3.858 1.728-3.858 3.858s1.728 3.858 3.858 3.858 3.858-1.728 3.858-3.858-1.728-3.858-3.858-3.858zm0 6.303c-1.341 0-2.445-1.095-2.445-2.445s1.104-2.445 2.445-2.445c1.341 0 2.445 1.095 2.445 2.445s-1.104 2.445-2.445 2.445zm3.226-5.833c0-0.655 0.53-1.185 1.185-1.185s1.185 0.53 1.185 1.185c0 0.655-0.53 1.185-1.185 1.185s-1.185-0.53-1.185-1.185z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm">© 2025 La Cr&ecirc;perie de la Gare. Tous droits r&eacute;serv&eacute;s.</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=1" type="text/javascript"></script>
+</body>
+</html>
