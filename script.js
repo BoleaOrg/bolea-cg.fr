@@ -68,14 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------- Opening hours (Europe/Paris time) ----------
     // Minutes since midnight, indexed by day (0 = Sunday).
+    // Keep in sync with the hours table and the JSON-LD in index.html.
+    const t = (h, m = 0) => h * 60 + m;
     const HOURS = {
-        0: [[720, 1320]],
-        1: [[720, 840], [990, 1320]],
-        2: [[720, 840], [990, 1320]],
-        3: [[720, 840], [990, 1320]],
-        4: [[720, 840], [990, 1320]],
-        5: [[720, 1380]],
-        6: [[720, 1380]],
+        0: [[t(9), t(22, 30)]],                      // Dimanche
+        1: [[t(9), t(14, 30)], [t(16, 30), t(22)]],  // Lundi
+        2: [[t(8), t(14, 30)], [t(16, 30), t(22, 30)]], // Mardi
+        3: [[t(8), t(14, 30)], [t(16, 30), t(22, 30)]], // Mercredi
+        4: [[t(8), t(14, 30)], [t(16, 30), t(22, 30)]], // Jeudi
+        5: [[t(8), t(14, 30)], [t(16, 30), t(23)]],  // Vendredi
+        6: [[t(9), t(23)]],                          // Samedi
     };
     const DAY_INDEX = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
 
