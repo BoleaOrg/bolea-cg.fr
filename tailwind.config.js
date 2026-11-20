@@ -4,12 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'background-light': '#FDF5E6',
-        'primary-brown': '#6F4E37',
-        'secondary-orange': '#FFD700',
+        ardoise: '#262C38',
+        'ardoise-deep': '#1B2029',
+        papier: '#F4F6F8',
+        lagon: '#0E7C86',
+        'lagon-light': '#3CC4CF',
+        rose: '#C2185B',
+        amber: '#FFC94A',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        body: ['Barlow', 'system-ui', 'sans-serif'],
+        display: ['"Big Shoulders Display"', 'Impact', 'sans-serif'],
       },
     },
   },

@@ -7,7 +7,7 @@
     <meta name="description" content="Crêperie artisanale face à la gare RER A de Sartrouville : galettes de sarrasin, crêpes, pancakes et brunch 7j/7. Sur place ou à emporter.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lacreperiedelagare.fr/">
-    <meta name="theme-color" content="#6F4E37">
+    <meta name="theme-color" content="#262C38">
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -110,124 +110,131 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="/style.css?v=2" rel="stylesheet">
-    <script src="/script.js?v=2" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="/style.css?v=3" rel="stylesheet">
+    <script src="/script.js?v=3" defer></script>
 </head>
-<body class="bg-background-light font-sans text-primary-brown">
-    <!-- Navbar -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" aria-label="Navigation principale">
-            <a href="/" class="flex items-center space-x-2">
-                <img src="/img/logo-creperie-de-la-gare-600.webp" alt="La Crêperie de la Gare, Sartrouville" width="300" height="64" class="w-[220px] sm:w-[300px] h-auto">
+<body class="bg-white font-body text-ardoise antialiased">
+    <a href="#menu" class="skip-link">Aller à la carte</a>
+
+    <!-- Header -->
+    <header class="site-header sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-ardoise/10">
+        <nav class="mx-auto max-w-6xl px-4 sm:px-6 h-16 md:h-20 flex justify-between items-center" aria-label="Navigation principale">
+            <a href="/" class="shrink-0">
+                <img src="/img/logo-creperie-de-la-gare-600.webp" alt="La Crêperie de la Gare, Sartrouville" width="300" height="64" class="w-[180px] md:w-[230px] h-auto">
             </a>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#menu" class="text-primary-brown hover:text-secondary-orange transition-colors">Carte</a>
-                <a href="#about" class="text-primary-brown hover:text-secondary-orange transition-colors">Restaurant</a>
-                <a href="#review" class="text-primary-brown hover:text-secondary-orange transition-colors">Avis</a>
-                <a href="#contact" class="text-primary-brown hover:text-secondary-orange transition-colors">Contact</a>
-                <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="bg-secondary-orange text-primary-brown font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Commander</a>
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#menu" class="nav-link">Carte</a>
+                <a href="#about" class="nav-link">Le restaurant</a>
+                <a href="#contact" class="nav-link">Horaires &amp; accès</a>
+                <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="btn btn-primary">Commander</a>
             </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-primary-brown focus:outline-none" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
+            <button id="mobile-menu-button" class="md:hidden p-2 -mr-2" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
             </button>
         </nav>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
-            <div class="flex flex-col items-center space-y-4">
-                <a href="#menu" class="text-primary-brown hover:text-secondary-orange transition-colors mobile-menu-link">Carte</a>
-                <a href="#about" class="text-primary-brown hover:text-secondary-orange transition-colors mobile-menu-link">Restaurant</a>
-                <a href="#review" class="text-primary-brown hover:text-secondary-orange transition-colors mobile-menu-link">Avis</a>
-                <a href="#contact" class="text-primary-brown hover:text-secondary-orange transition-colors mobile-menu-link">Contact</a>
-                <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="bg-secondary-orange text-primary-brown font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Commander</a>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-ardoise/10 bg-white">
+            <div class="flex flex-col px-4 py-4 gap-1 text-lg font-medium">
+                <a href="#menu" class="mobile-menu-link py-2">Carte</a>
+                <a href="#about" class="mobile-menu-link py-2">Le restaurant</a>
+                <a href="#contact" class="mobile-menu-link py-2">Horaires &amp; accès</a>
+                <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="btn btn-primary mt-2 self-start">Commander</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="relative bg-white pb-16">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center lg:space-x-12 py-12">
-                    <div class="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left">
-                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-primary-brown mb-4">
-                            La Crêperie de la Gare
-                            <span class="block text-2xl md:text-3xl font-semibold mt-2">Crêperie &amp; brunch à Sartrouville</span>
-                        </h1>
-                        <p class="text-xl md:text-2xl text-gray-600 mb-6">
-                            Bienvenue dans notre crêperie artisanale, face à la gare RER A de Sartrouville, où tradition et passion se rencontrent pour créer des saveurs inoubliables.
-                            Dégustez nos galettes bretonnes de sarrasin, nos salades gourmandes, nos pancakes et nos crêpes sucrées, préparés avec des ingrédients frais.
-                        </p>
-                        <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="inline-block bg-primary-brown text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
-                            Commander
-                        </a>
+        <!-- Hero -->
+        <section class="hero bg-ardoise text-white">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-20 grid grid-cols-1 gap-10 lg:grid-cols-[1.05fr_1fr] items-center">
+                <div>
+                    <p class="status-pill" data-status hidden></p>
+                    <h1 class="font-display font-extrabold uppercase leading-[0.9] tracking-tight text-[3.5rem] sm:text-7xl lg:text-[5.5rem]">
+                        La Crêperie<br>de la Gare
+                    </h1>
+                    <p class="mt-6 text-xl md:text-2xl text-white/85 max-w-[34ch] leading-snug">
+                        Galettes de sarrasin, crêpes et brunch, juste en face du RER A à Sartrouville.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="btn btn-primary btn-lg">Commander en ligne</a>
+                        <a href="#menu" class="btn btn-ghost btn-lg">Voir la carte</a>
                     </div>
-                    <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
-                        <img src="/img/galettes-crepes-creperie-sartrouville-1200.webp"
-                             srcset="/img/galettes-crepes-creperie-sartrouville-640.webp 640w, /img/galettes-crepes-creperie-sartrouville-1200.webp 1200w"
-                             sizes="(min-width: 1024px) 50vw, 100vw"
-                             width="1200" height="800" fetchpriority="high"
-                             alt="Galette de sarrasin, crêpe, pancake, café et dessert servis à La Crêperie de la Gare"
-                             class="rounded-3xl shadow-2xl w-full h-auto">
-                    </div>
+                    <p class="mt-8 text-white/70">
+                        <span class="text-amber" aria-hidden="true">★★★★</span><span class="text-white/30" aria-hidden="true">★</span>
+                        <span class="ml-1">4,3/5 sur 1 732 avis Google</span>
+                    </p>
+                </div>
+                <div class="hero-photo">
+                    <img src="/img/galettes-crepes-creperie-sartrouville-1200.webp"
+                         srcset="/img/galettes-crepes-creperie-sartrouville-640.webp 640w, /img/galettes-crepes-creperie-sartrouville-1200.webp 1200w"
+                         sizes="(min-width: 1024px) 560px, 100vw"
+                         width="1200" height="800" fetchpriority="high"
+                         alt="Galette de sarrasin, crêpe, pancake, café et dessert servis à La Crêperie de la Gare">
                 </div>
             </div>
         </section>
 
-        <!-- Menu Section -->
-        <section id="menu" class="py-16 bg-background-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold mb-4 text-center">Notre carte</h2>
-                <p class="text-center text-lg text-gray-700 mb-8">
-                    Happy hours tous les soirs de 16h30 à 19h : toutes les boissons à -50 %<br class="hidden sm:inline">
-                    <span class="text-sm">(commande par QR code, hors softs et boissons chaudes)</span>
-                </p>
-                <div class="max-w-4xl mx-auto">
-                    <a href="/carte.pdf" target="_blank" rel="noopener">
-                        <img src="/img/carte-creperie-de-la-gare-galettes-crepes-1600.webp"
-                             srcset="/img/carte-creperie-de-la-gare-galettes-crepes-800.webp 800w, /img/carte-creperie-de-la-gare-galettes-crepes-1600.webp 1600w"
-                             sizes="(min-width: 896px) 896px, 100vw"
-                             width="1600" height="1129" loading="lazy"
-                             alt="Carte des galettes, salades, crêpes, pancakes et glaces de La Crêperie de la Gare"
-                             class="rounded-3xl shadow-2xl w-full h-auto">
-                    </a>
-                </div>
-                <br>
-                <div class="max-w-4xl mx-auto">
-                    <a href="/carte.pdf" target="_blank" rel="noopener">
-                        <img src="/img/carte-creperie-de-la-gare-boissons-1600.webp"
-                             srcset="/img/carte-creperie-de-la-gare-boissons-800.webp 800w, /img/carte-creperie-de-la-gare-boissons-1600.webp 1600w"
-                             sizes="(min-width: 896px) 896px, 100vw"
-                             width="1600" height="1128" loading="lazy"
-                             alt="Carte des boissons : vins, bières, cidres, cocktails, mocktails et boissons chaudes"
-                             class="rounded-3xl shadow-2xl w-full h-auto">
-                    </a>
-                </div>
-                <p class="text-center mt-6"><a href="/carte.pdf" target="_blank" rel="noopener" class="underline font-semibold">Télécharger la carte complète (PDF)</a></p>
+        <!-- Happy hours -->
+        <div class="bg-rose text-white">
+            <p class="mx-auto max-w-6xl px-4 sm:px-6 py-3 text-center sm:text-left">
+                <strong class="font-display uppercase text-xl tracking-wide mr-2">Happy hours</strong>
+                Toutes les boissons à -50 % chaque soir de 16h30 à 19h, en commandant par QR code (hors softs et boissons chaudes).
+            </p>
+        </div>
 
-                <!-- Text version of the menu (readable by search engines and screen readers) -->
-                <div class="menu-text max-w-5xl mx-auto mt-12 grid gap-8 md:grid-cols-2 text-left">
+        <!-- Menu -->
+        <section id="menu" class="py-16 md:py-24 bg-papier">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="md:flex md:items-end md:justify-between gap-8 mb-10">
                     <div>
-                        <h3>Formules</h3>
-                        <ul>
-                            <li><strong>Formule express (midi)</strong> <span>11,9 €</span><em>Galette ou salade au choix + crêpe dessert au choix. Du lundi au vendredi midi, hors jours fériés.</em></li>
-                            <li><strong>Formule burger (midi)</strong> <span>15,9 €</span><em>Galette burger + crêpe dessert au choix. Du lundi au vendredi midi, hors jours fériés.</em></li>
-                            <li><strong>Formule brunch</strong> <span>15,8 €</span><em>Pancakes salés + pancakes sucrés + boisson chaude + jus pressé maison 25 cl. 7j/7 à toute heure.</em></li>
-                            <li><strong>Menu enfant (jusqu'à 10 ans)</strong> <span>8,8 €</span><em>Galette emmental jambon, poulet ou œuf + boisson + crêpe beurre sucre, Nutella, chocolat ou 1 boule de glace.</em></li>
-                        </ul>
+                        <h2 class="section-title">La carte</h2>
+                        <p class="mt-3 text-lg text-ardoise/75 max-w-[56ch]">Galettes bretonnes au sarrasin, salades, pancakes et crêpes sucrées, préparés avec des produits frais. Supplément d'un ingrédient : 1 €.</p>
+                    </div>
+                    <a href="/carte.pdf" target="_blank" rel="noopener" class="btn btn-outline mt-6 md:mt-0 shrink-0">Carte complète en PDF</a>
+                </div>
 
-                        <h3>Galettes de sarrasin traditionnelles</h3>
+                <!-- Formules -->
+                <h3 class="sr-only">Formules</h3>
+                <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-14">
+                    <li class="formule" style="--c:#C2571A">
+                        <p class="formule-name">Formule express</p>
+                        <p class="formule-desc">Galette ou salade au choix + crêpe dessert au choix</p>
+                        <p class="formule-meta">Midi, du lundi au vendredi</p>
+                        <p class="formule-price">11,9 €</p>
+                    </li>
+                    <li class="formule" style="--c:#8E5B00">
+                        <p class="formule-name">Formule burger</p>
+                        <p class="formule-desc">Galette burger + crêpe dessert au choix</p>
+                        <p class="formule-meta">Midi, du lundi au vendredi</p>
+                        <p class="formule-price">15,9 €</p>
+                    </li>
+                    <li class="formule" style="--c:#C23B30">
+                        <p class="formule-name">Formule brunch</p>
+                        <p class="formule-desc">Pancakes salés + pancakes sucrés + boisson chaude + jus pressé maison 25 cl</p>
+                        <p class="formule-meta">7j/7, à toute heure</p>
+                        <p class="formule-price">15,8 €</p>
+                    </li>
+                    <li class="formule" style="--c:#4D3F94">
+                        <p class="formule-name">Menu enfant</p>
+                        <p class="formule-desc">Galette emmental jambon, poulet ou œuf + boisson + crêpe ou boule de glace</p>
+                        <p class="formule-meta">Jusqu'à 10 ans</p>
+                        <p class="formule-price">8,8 €</p>
+                    </li>
+                </ul>
+
+                <!-- Text menu -->
+                <div class="menu-text">
+                    <div class="menu-cat" style="--c:#2F5FA7">
+                        <h3>Galettes traditionnelles</h3>
                         <ul>
                             <li><strong>Duo</strong> <span>8,6 €</span><em>Jambon, emmental.</em></li>
                             <li><strong>Complète</strong> <span>9,8 €</span><em>Jambon, œuf, emmental.</em></li>
                             <li><strong>Forestière</strong> <span>10,2 €</span><em>Champignons bruns poêlés au beurre, jambon, œuf, emmental.</em></li>
                             <li><strong>Ségur</strong> <span>10,8 €</span><em>Chèvre Rocamadour AOP au lait cru, miel, lardons, emmental, noix.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#2F5FA7">
                         <h3>Galettes spéciales</h3>
                         <ul>
                             <li><strong>Belle de Morteau</strong> <span>11,3 €</span><em>Saucisse fumée de Morteau IGP, reblochon de Savoie AOP, pommes de terre confites, oignons confits, emmental.</em></li>
@@ -239,7 +246,9 @@
                             <li><strong>Nordique</strong> <span>13,5 €</span><em>Saumon fumé, crème fraîche, ciboulette, pommes de terre confites, emmental.</em></li>
                             <li><strong>Guéméné</strong> <span>14,2 €</span><em>Andouille de Guéméné, sauce moutarde à l'ancienne, pommes de terre confites, emmental.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#4D3F94">
                         <h3>Galettes burgers</h3>
                         <ul>
                             <li><strong>Burger Cheesy</strong> <span>12,6 €</span><em>Steak haché frais (110 g), cheddar, fondue d'oignons à la crème maison, emmental, pommes de terre au four maison.</em></li>
@@ -247,7 +256,9 @@
                             <li><strong>Burger d'Aveyron</strong> <span>14,8 €</span><em>Steak haché frais (110 g), roquefort AOP fondu, fondue d'oignons à la crème maison, emmental, pommes au four maison.</em></li>
                             <li><strong>Burger de Normandie</strong> <span>14,9 €</span><em>Steak haché frais (110 g), camembert fondu, fondue d'oignons à la crème maison, emmental, pommes au four maison.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#2C7A55">
                         <h3>Salades composées</h3>
                         <ul>
                             <li><strong>Salade de chèvre chaud</strong> <span>11,50 €</span><em>Parmesan, toast de chèvre Rocamadour AOP au lait cru, miel, pommes de terre confites, salade, tomates.</em></li>
@@ -255,7 +266,9 @@
                             <li><strong>Salade norvégienne</strong> <span>13,00 €</span><em>Saumon fumé, pommes de terre confites, crème fraîche et ciboulette, salade, tomates.</em></li>
                             <li><strong>Salade auvergnate</strong> <span>13,00 €</span><em>Parmesan, lardons, œuf, pommes de terre confites, jambon de pays, salade, tomates.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#A3243B">
                         <h3>À partager</h3>
                         <ul>
                             <li><strong>Ardoise raclette et charcuterie</strong> <span>12,9 €</span><em>Pommes de terre, raclette de Savoie AOP, viande des Grisons, filet mignon, jambon Serrano 16 mois, saucisson au sel de Guérande, jambon blanc.</em></li>
@@ -265,21 +278,26 @@
                             <li><strong>Ardoise de tapas</strong> <span>10,80 €</span><em>5 mozzarella sticks, 5 tenders de poulet, salade, tomates confites.</em></li>
                         </ul>
                     </div>
-                    <div>
+
+                    <div class="menu-cat" style="--c:#C2571A">
                         <h3>Brunch : pancakes salés</h3>
                         <ul>
                             <li><strong>Bûcheron</strong> <span>10,30 €</span><em>Pancakes maison, œufs au plat, champignons sautés au beurre, sirop d'érable, beurre.</em></li>
                             <li><strong>New-yorkais</strong> <span>10,90 €</span><em>Pancakes maison, œufs au plat, bacon grillé, sirop d'érable, beurre.</em></li>
                             <li><strong>Écossais</strong> <span>11,30 €</span><em>Pancakes maison, œufs au plat, saumon fumé, fromage frais, ciboulette.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#C2571A">
                         <h3>Pancakes sucrés</h3>
                         <ul>
                             <li><strong>Sweet Banana</strong> <span>6,9 €</span><em>Chocolat maison, Nutella ou caramel au beurre salé maison, banane, crème fouettée mascarpone, amandes grillées.</em></li>
                             <li><strong>Savoury Fruities</strong> <span>7,6 €</span><em>Fraises fraîches, kiwi, pommes fraîches, crème fouettée mascarpone maison, amandes grillées.</em></li>
                             <li><strong>Apple Speculoos</strong> <span>7,3 €</span><em>Compote de pomme maison, spéculoos émietté, lamelles de pommes fraîches.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#C2185B">
                         <h3>Crêpes &amp; pancakes sucrés</h3>
                         <ul>
                             <li><strong>Beurre sucre</strong> <span>3,6 €</span></li>
@@ -290,7 +308,9 @@
                             <li><strong>Mi-choco</strong> <span>6,4 €</span><em>Crêpe en chocolat, caramel beurre salé maison, chocolat blanc.</em></li>
                             <li><strong>Mi-cuit maison</strong> <span>7,6 €</span><em>Chocolat maison, boule de glace vanille, caramel maison, amandes.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#C2185B">
                         <h3>Crêpes flambées</h3>
                         <ul>
                             <li><strong>Suzette</strong> <span>7,6 €</span><em>Beurre, sucre, flambée au Grand Marnier.</em></li>
@@ -298,14 +318,10 @@
                             <li><strong>Plougastel</strong> <span>8,6 €</span><em>Fraises fraîches, confiture de fraise, flambée au Grand Marnier.</em></li>
                             <li><strong>Saint-Louis</strong> <span>8,6 €</span><em>Poire, chocolat maison, flambée au noyau de Poissy.</em></li>
                         </ul>
+                    </div>
 
-                        <h3>Cafés gourmands</h3>
-                        <ul>
-                            <li><strong>Duo café gourmand</strong> <span>6,4 €</span><em>1 expresso + 2 mini-pancakes.</em></li>
-                            <li><strong>Trio café gourmand</strong> <span>8,6 €</span><em>1 expresso + 3 mini-pancakes.</em></li>
-                        </ul>
-
-                        <h3>Glaces</h3>
+                    <div class="menu-cat" style="--c:#C2185B">
+                        <h3>Glaces &amp; cafés gourmands</h3>
                         <ul>
                             <li><strong>1 boule / 2 boules</strong> <span>3,6 € / 4,7 €</span><em>Caramel au beurre salé, vanille, chocolat, sorbet fraise, citron ou noix de coco, chantilly maison.</em></li>
                             <li><strong>Dame blanche</strong> <span>5,9 €</span></li>
@@ -313,107 +329,133 @@
                             <li><strong>Fruitière</strong> <span>6,9 €</span></li>
                             <li><strong>Banana split</strong> <span>7,6 €</span></li>
                             <li><strong>Colonel</strong> <span>8,2 €</span></li>
+                            <li><strong>Duo café gourmand</strong> <span>6,4 €</span><em>1 expresso + 2 mini-pancakes.</em></li>
+                            <li><strong>Trio café gourmand</strong> <span>8,6 €</span><em>1 expresso + 3 mini-pancakes.</em></li>
                         </ul>
+                    </div>
 
+                    <div class="menu-cat" style="--c:#0E7C86">
                         <h3>Bar &amp; boissons</h3>
                         <p>Cidres bouchés du Val de Rance (doux, brut, rosé), bières (Superbock, Grimbergen, Duchesse Anne…), vins rouges, rosés et blancs, cocktails (Spritz breton, mojito, caipirinha, Moscow mule…), mocktails, citronnade et jus d'orange pressés maison, cafés, chocolat chaud et infusions.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-16 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row items-center justify-between md:space-x-8">
-                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-                        <img src="/img/salle-creperie-de-la-gare-sartrouville-900.webp" width="900" height="523" loading="lazy"
-                             alt="Salle chaleureuse de La Crêperie de la Gare à Sartrouville"
-                             class="rounded-3xl shadow-2xl w-full h-auto">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold mb-4">À propos de nous</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                            Située au cœur de Sartrouville, en face de la gare du RER A, la Crêperie de la Gare est l'endroit parfait pour une escapade gourmande.
-                            Notre passion pour la crêpe, accompagnée d'un café, nous pousse à n'utiliser que de bons produits.
-                        </p>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            Nous vous accueillons dans une ambiance chaleureuse et familiale, idéale pour vos repas en solo, en couple ou entre amis.
-                        </p>
-                    </div>
+                <!-- Paper menu -->
+                <div class="mt-14 grid gap-4 sm:grid-cols-2">
+                    <a href="/carte.pdf" target="_blank" rel="noopener" class="paper-menu">
+                        <img src="/img/carte-creperie-de-la-gare-galettes-crepes-800.webp"
+                             srcset="/img/carte-creperie-de-la-gare-galettes-crepes-800.webp 800w, /img/carte-creperie-de-la-gare-galettes-crepes-1600.webp 1600w"
+                             sizes="(min-width: 640px) 560px, 100vw"
+                             width="800" height="565" loading="lazy"
+                             alt="Carte papier des galettes, salades, crêpes, pancakes et glaces de La Crêperie de la Gare">
+                        <span>Carte des plats et desserts (PDF)</span>
+                    </a>
+                    <a href="/carte.pdf" target="_blank" rel="noopener" class="paper-menu">
+                        <img src="/img/carte-creperie-de-la-gare-boissons-800.webp"
+                             srcset="/img/carte-creperie-de-la-gare-boissons-800.webp 800w, /img/carte-creperie-de-la-gare-boissons-1600.webp 1600w"
+                             sizes="(min-width: 640px) 560px, 100vw"
+                             width="800" height="564" loading="lazy"
+                             alt="Carte papier des boissons : vins, bières, cidres, cocktails, mocktails et boissons chaudes">
+                        <span>Carte des boissons (PDF)</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Review Section -->
-        <section id="review" class="py-8 bg-background-light">
-            <div class="reviews-section">
-                <div class="reviews-header">
-                    <h2 class="reviews-title">Avis de nos clients</h2>
-                    <p class="reviews-subtitle">Découvrez ce que pensent nos clients de la Crêperie de la Gare</p>
+        <!-- About -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 grid grid-cols-1 gap-10 md:grid-cols-2 items-center">
+                <img src="/img/salle-creperie-de-la-gare-sartrouville-900.webp" width="900" height="523" loading="lazy"
+                     alt="Salle chaleureuse de La Crêperie de la Gare à Sartrouville"
+                     class="rounded-photo w-full h-auto">
+                <div>
+                    <h2 class="section-title">Le restaurant</h2>
+                    <p class="mt-5 text-lg leading-relaxed text-ardoise/80 max-w-[60ch]">
+                        Située au cœur de Sartrouville, en face de la gare du RER A, la Crêperie de la Gare est l'endroit parfait pour une escapade gourmande.
+                        Notre passion pour la crêpe, accompagnée d'un café, nous pousse à n'utiliser que de bons produits.
+                    </p>
+                    <p class="mt-4 text-lg leading-relaxed text-ardoise/80 max-w-[60ch]">
+                        Nous vous accueillons dans une ambiance chaleureuse et familiale, idéale pour vos repas en solo, en couple ou entre amis, sur place ou à emporter.
+                    </p>
 
-                    <div class="overall-rating">
-                        <div class="rating-score">4,3/5</div>
+                    <div id="review" class="rating mt-8">
+                        <p class="rating-score">4,3<span>/5</span></p>
                         <div>
                             <div class="stars" role="img" aria-label="Note de 4,3 sur 5">
                                 <span class="stars-empty" aria-hidden="true">★★★★★</span>
                                 <span class="stars-full" style="width:86%" aria-hidden="true">★★★★★</span>
                             </div>
-                            <div class="rating-info">
-                                <div class="rating-count">Basé sur 1 732 avis Google vérifiés</div>
-                            </div>
+                            <p class="text-ardoise/70">Basé sur 1 732 avis Google vérifiés</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row items-center md:space-x-8">
-                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-                        <h2 class="text-4xl font-bold mb-4">Contact &amp; horaires</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                            Venez nous rendre visite et savourer nos délicieuses galettes et crêpes, juste en face de la gare RER A de Sartrouville.
-                        </p>
-                        <div class="space-y-4 text-lg">
-                            <p><strong>Adresse : </strong><a href="https://maps.app.goo.gl/yJjfHzvVzsqW2Tjr5" target="_blank" rel="noopener" class="underline">1 place des Fusillés, 78500 Sartrouville</a></p>
-                            <p><strong>Horaires : </strong></p>
-                            <ul class="list-disc list-inside ml-4">
-                                <li>Lundi au jeudi : 12h - 14h | 16h30 - 22h</li>
-                                <li>Vendredi et samedi : 12h - 23h</li>
-                                <li>Dimanche : 12h - 22h</li>
-                            </ul>
-                            <p><strong>Réservations : </strong><a href="mailto:creperiedelagare@gmail.com" class="underline">creperiedelagare@gmail.com</a></p>
+        <!-- Contact & hours -->
+        <section id="contact" class="py-16 md:py-24 bg-ardoise text-white">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] items-start">
+                <div class="board" aria-labelledby="board-title">
+                    <div class="board-head">
+                        <h2 id="board-title" class="board-title">Horaires</h2>
+                        <p class="board-clock" data-clock aria-hidden="true"></p>
+                    </div>
+                    <table class="board-table">
+                        <caption class="sr-only">Horaires d'ouverture de La Crêperie de la Gare</caption>
+                        <tbody>
+                            <tr data-days="1"><th scope="row">Lundi</th><td>12:00 – 14:00</td><td>16:30 – 22:00</td></tr>
+                            <tr data-days="2"><th scope="row">Mardi</th><td>12:00 – 14:00</td><td>16:30 – 22:00</td></tr>
+                            <tr data-days="3"><th scope="row">Mercredi</th><td>12:00 – 14:00</td><td>16:30 – 22:00</td></tr>
+                            <tr data-days="4"><th scope="row">Jeudi</th><td>12:00 – 14:00</td><td>16:30 – 22:00</td></tr>
+                            <tr data-days="5"><th scope="row">Vendredi</th><td colspan="2">12:00 – 23:00</td></tr>
+                            <tr data-days="6"><th scope="row">Samedi</th><td colspan="2">12:00 – 23:00</td></tr>
+                            <tr data-days="0"><th scope="row">Dimanche</th><td colspan="2">12:00 – 22:00</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="board-status" data-status hidden></p>
+                </div>
+
+                <div>
+                    <h2 class="section-title text-white">Nous trouver</h2>
+                    <p class="mt-5 text-lg text-white/80 max-w-[48ch]">Juste en face de la gare RER A de Sartrouville, à quelques minutes de Houilles, Maisons-Laffitte, Montesson et Cormeilles-en-Parisis.</p>
+                    <dl class="contact-list mt-8">
+                        <div>
+                            <dt>Adresse</dt>
+                            <dd><a href="https://maps.app.goo.gl/yJjfHzvVzsqW2Tjr5" target="_blank" rel="noopener">1 place des Fusillés, 78500 Sartrouville</a></dd>
                         </div>
+                        <div>
+                            <dt>Réservations</dt>
+                            <dd><a href="mailto:creperiedelagare@gmail.com">creperiedelagare@gmail.com</a></dd>
+                        </div>
+                    </dl>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="https://maps.app.goo.gl/yJjfHzvVzsqW2Tjr5" target="_blank" rel="noopener" class="btn btn-primary">Itinéraire</a>
+                        <a href="https://qr.dood.com/creperie-de-la-gare" rel="noopener" class="btn btn-ghost">Commander à emporter</a>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <img src="/img/pancakes-fruits-creperie-sartrouville-1200.webp"
-                             srcset="/img/pancakes-fruits-creperie-sartrouville-640.webp 640w, /img/pancakes-fruits-creperie-sartrouville-1200.webp 1200w"
-                             sizes="(min-width: 768px) 50vw, 100vw"
-                             width="1200" height="800" loading="lazy"
-                             alt="Pancakes maison aux fruits frais de La Crêperie de la Gare"
-                             class="rounded-3xl shadow-2xl w-full h-auto">
-                    </div>
+                    <img src="/img/pancakes-fruits-creperie-sartrouville-1200.webp"
+                         srcset="/img/pancakes-fruits-creperie-sartrouville-640.webp 640w, /img/pancakes-fruits-creperie-sartrouville-1200.webp 1200w"
+                         sizes="(min-width: 1024px) 500px, 100vw"
+                         width="1200" height="800" loading="lazy"
+                         alt="Pancakes maison aux fruits frais de La Crêperie de la Gare"
+                         class="rounded-photo w-full h-auto mt-10">
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-brown text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="https://www.instagram.com/mehdy_bsi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de La Crêperie de la Gare" class="text-white hover:text-secondary-orange transition-colors">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.7.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.7 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
-                </a>
+    <footer class="bg-ardoise-deep text-white/75">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+            <div>
+                <p class="font-display font-extrabold uppercase text-2xl text-white tracking-wide">La Crêperie de la Gare</p>
+                <p class="mt-1 text-sm">Crêperie artisanale, bar et café à Sartrouville, sur place ou à emporter.</p>
             </div>
-            <p class="text-sm opacity-90 mb-4">
-                Crêperie artisanale, bar et café en face de la gare RER A de Sartrouville, sur place ou à emporter.<br>
-                À quelques minutes de Houilles, Maisons-Laffitte, Montesson et Cormeilles-en-Parisis.
-            </p>
-            <p class="text-sm">© 2026 La Crêperie de la Gare. Tous droits réservés.<br><a href="https://onylab.com" title="Applications pour les restaurants">Made by OnyLab.com</a></p>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="https://www.instagram.com/mehdy_bsi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de La Crêperie de la Gare" class="text-white hover:text-lagon-light">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.7.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.7 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+                </a>
+                <p>© 2026 La Crêperie de la Gare<br><a href="https://onylab.com" title="Applications pour les restaurants" class="underline hover:text-white">Made by OnyLab.com</a></p>
+            </div>
         </div>
     </footer>
 </body>
