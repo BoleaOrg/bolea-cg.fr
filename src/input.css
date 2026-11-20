@@ -309,3 +309,48 @@ html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
 .contact-list dd { font-size: 1.2rem; font-weight: 500; overflow-wrap: anywhere; }
 .contact-list a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255, 255, 255, 0.35); }
 .contact-list a:hover { text-decoration-color: #3CC4CF; }
+
+/* ---------- Touch targets ---------- */
+.tap { display: inline-block; padding-block: 0.6rem; }
+
+/* ---------- Menu category bar ---------- */
+.menu-nav {
+    position: sticky;
+    top: 65px;
+    z-index: 40;
+    margin: 0 -1rem 2rem;
+    padding: 0.6rem 1rem;
+    background: rgba(244, 246, 248, 0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #E6E9EE;
+}
+@media (min-width: 640px) { .menu-nav { margin-inline: -1.5rem; padding-inline: 1.5rem; } }
+@media (min-width: 768px) { .menu-nav { top: 81px; } }
+.menu-nav ul {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+}
+.menu-nav ul::-webkit-scrollbar { display: none; }
+.menu-nav li { flex: none; scroll-snap-align: start; }
+.menu-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 1rem;
+    border-radius: 999px;
+    border: 1.5px solid #D5D9E0;
+    background: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.menu-nav a:hover { border-color: #262C38; }
+.menu-nav a[aria-current="true"] { background: #262C38; border-color: #262C38; color: #fff; }
+
+/* Anchor targets inside the menu: added to the html scroll-padding so they clear the category bar */
+#menu [data-nav] { scroll-margin-top: 3.5rem; }
+@media (min-width: 768px) { #menu [data-nav] { scroll-margin-top: 4.5rem; } }

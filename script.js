@@ -14,6 +14,56 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const link of document.getElementsByClassName('mobile-menu-link')) {
             link.addEventListener('click', () => setMenuOpen(false));
         }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                setMenuOpen(false);
+                mobileMenuButton.focus();
+            }
+        });
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && !e.target.closest('.site-header')) {
+                setMenuOpen(false);
+            }
+        });
+    }
+
+    // ---------- Menu category bar: highlight the category on screen ----------
+    const navBar = document.querySelector('.menu-nav ul');
+    const navLinks = new Map(
+        [...document.querySelectorAll('[data-nav-link]')].map((a) => [a.dataset.navLink, a])
+    );
+    if (navBar && navLinks.size && 'IntersectionObserver' in window) {
+        let current = null;
+        const setActive = (key) => {
+            if (key === current) return;
+            current = key;
+            navLinks.forEach((a, k) => {
+                if (k === key) {
+                    a.setAttribute('aria-current', 'true');
+                    const left = a.offsetLeft - (navBar.clientWidth - a.offsetWidth) / 2;
+                    navBar.scrollTo({ left, behavior: 'smooth' });
+                } else {
+                    a.removeAttribute('aria-current');
+                }
+            });
+        };
+        const visible = new Map();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    visible.set(entry.target, entry.target.getBoundingClientRect().top);
+                } else {
+                    visible.delete(entry.target);
+                }
+            });
+            if (!visible.size) return;
+            // The topmost visible block in reading order wins.
+            const first = [...visible.keys()].sort(
+                (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
+            )[0];
+            setActive(first.dataset.nav);
+        }, { rootMargin: '-160px 0px -55% 0px' });
+        document.querySelectorAll('#menu [data-nav]').forEach((el) => observer.observe(el));
     }
 
     // ---------- Opening hours (Europe/Paris time) ----------
