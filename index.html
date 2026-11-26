@@ -129,7 +129,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap" rel="stylesheet">
-    <link href="/style.css?v=4" rel="stylesheet">
+    <link href="/style.css?v=5" rel="stylesheet">
     <script src="/script.js?v=5" defer></script>
 </head>
 <body class="bg-white font-body text-ardoise antialiased">
@@ -196,25 +196,21 @@
         <div class="bg-rose text-white">
             <p class="mx-auto max-w-6xl px-4 sm:px-6 py-3 text-center sm:text-left">
                 <strong class="font-display uppercase text-xl tracking-wide mr-2">Happy hours</strong>
-                Toutes les boissons à -50 % chaque soir de 16h30 à 19h, en commandant par QR code (hors softs et boissons chaudes).
+                Toutes les boissons à -50 % chaque soir de 16h30 à 22h, en commandant par QR code (hors softs et boissons chaudes).
             </p>
         </div>
 
         <!-- Menu -->
         <section id="menu" class="py-16 md:py-24 bg-papier">
             <div class="mx-auto max-w-6xl px-4 sm:px-6">
-                <div class="md:flex md:items-end md:justify-between gap-8 mb-10">
-                    <div>
-                        <h2 class="section-title">La carte</h2>
-                        <p class="mt-3 text-lg text-ardoise/75 max-w-[56ch]">Galettes bretonnes au sarrasin, salades, pancakes et crêpes sucrées, préparés avec des produits frais. Supplément d'un ingrédient : 1 €.</p>
-                    </div>
-                    <a href="/carte.pdf" target="_blank" rel="noopener" class="btn btn-outline mt-6 md:mt-0 shrink-0">Carte complète en PDF</a>
+                <div class="mb-10">
+                    <h2 class="section-title">La carte</h2>
+                    <p class="mt-3 text-lg text-ardoise/75 max-w-[56ch]">Galettes bretonnes au sarrasin, galettes burgers, salades, pancakes et crêpes sucrées, préparés avec des produits frais. Galettes et burgers servis avec salade et tomates.</p>
                 </div>
 
-                <!-- Formules -->
                 <nav class="menu-nav" aria-label="Catégories de la carte">
                     <ul>
-                        <li><a href="#formules" data-nav-link="formules">Formules</a></li>
+                        <li><a href="#menus" data-nav-link="menus">Menus</a></li>
                         <li><a href="#galettes" data-nav-link="galettes">Galettes</a></li>
                         <li><a href="#burgers" data-nav-link="burgers">Burgers</a></li>
                         <li><a href="#salades" data-nav-link="salades">Salades</a></li>
@@ -226,31 +222,18 @@
                     </ul>
                 </nav>
 
-                <h3 class="sr-only">Formules</h3>
-                <ul id="formules" data-nav="formules" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-14">
-                    <li class="formule" style="--c:#C2571A">
-                        <p class="formule-name">Formule express</p>
-                        <p class="formule-desc">Galette ou salade au choix + crêpe dessert au choix</p>
-                        <p class="formule-meta">Midi, du lundi au vendredi</p>
-                        <p class="formule-price">11,9 €</p>
-                    </li>
-                    <li class="formule" style="--c:#8E5B00">
-                        <p class="formule-name">Formule burger</p>
-                        <p class="formule-desc">Galette burger + crêpe dessert au choix</p>
-                        <p class="formule-meta">Midi, du lundi au vendredi</p>
-                        <p class="formule-price">15,9 €</p>
-                    </li>
+                <!-- Menus -->
+                <h3 class="sr-only">Menus</h3>
+                <ul id="menus" data-nav="menus" class="grid gap-4 sm:grid-cols-2 mb-14">
                     <li class="formule" style="--c:#C23B30">
-                        <p class="formule-name">Formule brunch</p>
-                        <p class="formule-desc">Pancakes salés + pancakes sucrés + boisson chaude + jus pressé maison 25 cl</p>
-                        <p class="formule-meta">7j/7, à toute heure</p>
-                        <p class="formule-price">15,8 €</p>
+                        <p class="formule-name">Menu brunch</p>
+                        <p class="formule-desc">Pancakes salés + pancakes sucrés au choix + jus d'orange pressé maison 25 cl + cappuccino, chocolat chaud ou thé</p>
+                        <p class="formule-meta">7j/7</p>
                     </li>
                     <li class="formule" style="--c:#4D3F94">
                         <p class="formule-name">Menu enfant</p>
-                        <p class="formule-desc">Galette emmental jambon, poulet ou œuf + boisson + crêpe ou boule de glace</p>
+                        <p class="formule-desc">Galette emmental jambon, poulet ou œuf + nectar d'abricot, jus de pomme ou grenadine à l'eau + crêpe beurre sucre, Nutella ou chocolat, ou 1 boule de glace</p>
                         <p class="formule-meta">Jusqu'à 10 ans</p>
-                        <p class="formule-price">8,8 €</p>
                     </li>
                 </ul>
 
@@ -259,137 +242,161 @@
                     <div class="menu-cat" id="galettes" data-nav="galettes" style="--c:#2F5FA7">
                         <h3>Galettes traditionnelles</h3>
                         <ul>
-                            <li><strong>Duo</strong> <span>8,6 €</span><em>Jambon, emmental.</em></li>
-                            <li><strong>Complète</strong> <span>9,8 €</span><em>Jambon, œuf, emmental.</em></li>
-                            <li><strong>Forestière</strong> <span>10,2 €</span><em>Champignons bruns poêlés au beurre, jambon, œuf, emmental.</em></li>
-                            <li><strong>Ségur</strong> <span>10,8 €</span><em>Chèvre Rocamadour AOP au lait cru, miel, lardons, emmental, noix.</em></li>
+                            <li><strong>Duo</strong><em>Jambon, emmental.</em></li>
+                            <li><strong>Complète</strong><em>Jambon, œuf, emmental.</em></li>
+                            <li><strong>Forestière</strong><em>Champignons frais poêlés au beurre et à l'ail, jambon, œuf, emmental.</em></li>
+                            <li><strong>Ségur</strong><em>Chèvre, miel, lardons, emmental, noix.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="galettes-speciales" data-nav="galettes" style="--c:#2F5FA7">
                         <h3>Galettes spéciales</h3>
                         <ul>
-                            <li><strong>Belle de Morteau</strong> <span>11,3 €</span><em>Saucisse fumée de Morteau IGP, reblochon de Savoie AOP, pommes de terre confites, oignons confits, emmental.</em></li>
-                            <li><strong>Courchevel</strong> <span>11,7 €</span><em>Raclette de Savoie AOP, pommes de terre confites, jambon de pays 16 mois d'âge, oignons confits, œuf, emmental.</em></li>
-                            <li><strong>Veggie</strong> <span>11,8 €</span><em>Champignons bruns poêlés au beurre, tomates, oignons confits, pommes de terre confites, emmental.</em></li>
-                            <li><strong>Poulet Stragon</strong> <span>11,8 €</span><em>Poulet cuit au four, sauce estragon à la crème, champignons bruns poêlés au beurre, pommes de terre confites, emmental.</em></li>
-                            <li><strong>Poulet Boursin</strong> <span>11,9 €</span><em>Poulet frais cuit au four, sauce à la crème Boursin, pommes de terre confites, emmental.</em></li>
-                            <li><strong>Quatre fromages</strong> <span>12,6 €</span><em>Chèvre, reblochon de Savoie AOP, bleu d'Auvergne AOP, emmental.</em></li>
-                            <li><strong>Nordique</strong> <span>13,5 €</span><em>Saumon fumé, crème fraîche, ciboulette, pommes de terre confites, emmental.</em></li>
-                            <li><strong>Guéméné</strong> <span>14,2 €</span><em>Andouille de Guéméné, sauce moutarde à l'ancienne, pommes de terre confites, emmental.</em></li>
+                            <li><strong>Belle de Morteau</strong><em>Saucisse fumée de Morteau IGP, reblochon de Savoie AOP, pommes de terre confites, oignons confits, emmental.</em></li>
+                            <li><strong>Courchevel</strong><em>Raclette de Savoie AOP fondue, pommes de terre confites, jambon de pays 16 mois d'âge, oignons confits, œuf, emmental.</em></li>
+                            <li><strong>Veggie</strong><em>Champignons bruns poêlés au beurre et à l'ail, tomates, oignons confits, pommes de terre, emmental.</em></li>
+                            <li><strong>Poulet Boursin</strong><em>Poulet pané, sauce à la crème de Boursin, pommes de terre confites, emmental.</em></li>
+                            <li><strong>Quatre fromages</strong><em>Chèvre, reblochon de Savoie AOP, roquefort AOP, emmental.</em></li>
+                            <li><strong>Nordique</strong><em>Saumon fumé, crème fraîche, ciboulette, pommes de terre confites, emmental.</em></li>
+                            <li><strong>Guéméné</strong><em>Andouille de Guéméné, sauce moutarde, pommes de terre confites, emmental.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="burgers" data-nav="burgers" style="--c:#4D3F94">
                         <h3>Galettes burgers</h3>
                         <ul>
-                            <li><strong>Burger Cheesy</strong> <span>12,6 €</span><em>Steak haché frais (110 g), cheddar, fondue d'oignons à la crème maison, emmental, pommes de terre au four maison.</em></li>
-                            <li><strong>Burger Raclette</strong> <span>13,9 €</span><em>Steak haché frais (110 g), raclette de Savoie AOP, fondue d'oignons à la crème maison, emmental, pommes au four maison.</em></li>
-                            <li><strong>Burger d'Aveyron</strong> <span>14,8 €</span><em>Steak haché frais (110 g), roquefort AOP fondu, fondue d'oignons à la crème maison, emmental, pommes au four maison.</em></li>
-                            <li><strong>Burger de Normandie</strong> <span>14,9 €</span><em>Steak haché frais (110 g), camembert fondu, fondue d'oignons à la crème maison, emmental, pommes au four maison.</em></li>
+                            <li><strong>Cheesy</strong><em>Steak haché frais (110 g), cheddar, fondue d'oignons, emmental, pommes de terre au four maison.</em></li>
+                            <li><strong>Raclette</strong><em>Steak haché frais (110 g), raclette de Savoie AOP, fondue d'oignons, emmental, pommes au four maison.</em></li>
+                            <li><strong>Aveyron</strong><em>Steak haché frais (110 g), roquefort AOP fondu, fondue d'oignons, emmental, pommes au four maison.</em></li>
+                            <li><strong>Normandie</strong><em>Steak haché frais (110 g), camembert fondu, fondue d'oignons à la crème maison, emmental, pommes au four maison.</em></li>
                         </ul>
+                        <p>Viande de 220 g possible en option.</p>
                     </div>
 
                     <div class="menu-cat" id="salades" data-nav="salades" style="--c:#2C7A55">
-                        <h3>Salades composées</h3>
+                        <h3>Salades</h3>
                         <ul>
-                            <li><strong>Salade de chèvre chaud</strong> <span>11,50 €</span><em>Parmesan, toast de chèvre Rocamadour AOP au lait cru, miel, pommes de terre confites, salade, tomates.</em></li>
-                            <li><strong>Salade César</strong> <span>12,80 €</span><em>Poulet cuit au four, croûtons, œuf, sauce César, parmesan, pommes de terre confites, salade, tomates.</em></li>
-                            <li><strong>Salade norvégienne</strong> <span>13,00 €</span><em>Saumon fumé, pommes de terre confites, crème fraîche et ciboulette, salade, tomates.</em></li>
-                            <li><strong>Salade auvergnate</strong> <span>13,00 €</span><em>Parmesan, lardons, œuf, pommes de terre confites, jambon de pays, salade, tomates.</em></li>
+                            <li><strong>Salade chèvre chaud</strong><em>Cantal, toast de chèvre, miel, pommes de terre au four maison, salade, tomates.</em></li>
+                            <li><strong>Salade Caesar</strong><em>Poulet pané, croûtons de pain, œuf, sauce Caesar, salade, tomates, parmesan.</em></li>
+                            <li><strong>Salade norvégienne</strong><em>Saumon fumé, pommes de terre au four maison, crème fraîche et ciboulette, salade, tomates.</em></li>
+                            <li><strong>Salade auvergnate</strong><em>Cantal, lardons, œuf, pommes de terre au four maison, jambon de pays, salade, tomates.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="a-partager" data-nav="a-partager" style="--c:#A3243B">
-                        <h3>À partager</h3>
+                        <h3>Les ardoises à partager (ou pas)</h3>
                         <ul>
-                            <li><strong>Ardoise raclette et charcuterie</strong> <span>12,9 €</span><em>Pommes de terre, raclette de Savoie AOP, viande des Grisons, filet mignon, jambon Serrano 16 mois, saucisson au sel de Guérande, jambon blanc.</em></li>
-                            <li><strong>Ardoise de fromage</strong> <span>9,8 €</span><em>Bleu d'Auvergne AOP, toasts de chèvre Rocamadour AOP, reblochon AOP, parmesan.</em></li>
-                            <li><strong>Ardoise de charcuterie</strong> <span>10,20 €</span><em>Jambon Serrano 16 mois, saucisson au sel de Guérande, jambon blanc supérieur.</em></li>
-                            <li><strong>Ardoise mixte</strong> <span>10,20 €</span><em>Assortiment de charcuterie et de fromages.</em></li>
-                            <li><strong>Ardoise de tapas</strong> <span>10,80 €</span><em>5 mozzarella sticks, 5 tenders de poulet, salade, tomates confites.</em></li>
+                            <li><strong>Tenders</strong><em>2, 4, 6 ou 8 pièces.</em></li>
+                            <li><strong>Ardoise de fromage</strong><em>Bleu d'Auvergne AOP, 3 toasts de chèvre chaud, reblochon AOP, parmesan, toasts, beurre, salade, tomates.</em></li>
+                            <li><strong>Ardoise de charcuterie</strong><em>Jambon Serrano 16 mois, saucisson au sel de Guérande, jambon blanc supérieur, beurre, toasts, salade, tomates.</em></li>
+                            <li><strong>Ardoise mixte</strong><em>Assortiment de charcuterie, 2 toasts de chèvre chaud, reblochon AOP, bleu d'Auvergne, parmesan, beurre, toasts, salade, tomates.</em></li>
+                            <li><strong>Ardoise de tapas</strong><em>5 mozzarella sticks, 5 tenders de poulet, salade, tomates confites.</em></li>
+                            <li><strong>Ardoise raclette et charcuterie</strong><em>Pommes de terre, raclette au lait cru de Savoie AOP, viande des Grisons, filet mignon, jambon Serrano 16 mois, saucisson au sel de Guérande, jambon blanc supérieur. Le midi, sur commande par QR code.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="brunch" data-nav="brunch" style="--c:#C2571A">
                         <h3>Brunch : pancakes salés</h3>
                         <ul>
-                            <li><strong>Bûcheron</strong> <span>10,30 €</span><em>Pancakes maison, œufs au plat, champignons sautés au beurre, sirop d'érable, beurre.</em></li>
-                            <li><strong>New-yorkais</strong> <span>10,90 €</span><em>Pancakes maison, œufs au plat, bacon grillé, sirop d'érable, beurre.</em></li>
-                            <li><strong>Écossais</strong> <span>11,30 €</span><em>Pancakes maison, œufs au plat, saumon fumé, fromage frais, ciboulette.</em></li>
+                            <li><strong>Écossais</strong><em>Pancakes maison, œufs au plat, saumon fumé, fromage frais, ciboulette.</em></li>
+                            <li><strong>Bûcheron</strong><em>Pancakes maison, œufs au plat, champignons sautés au beurre, sirop d'érable, beurre.</em></li>
+                            <li><strong>New-yorkais</strong><em>Pancakes maison, œufs au plat, bacon grillé, sirop d'érable, beurre.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="pancakes" data-nav="brunch" style="--c:#C2571A">
                         <h3>Pancakes sucrés</h3>
                         <ul>
-                            <li><strong>Sweet Banana</strong> <span>6,9 €</span><em>Chocolat maison, Nutella ou caramel au beurre salé maison, banane, crème fouettée mascarpone, amandes grillées.</em></li>
-                            <li><strong>Savoury Fruities</strong> <span>7,6 €</span><em>Fraises fraîches, kiwi, pommes fraîches, crème fouettée mascarpone maison, amandes grillées.</em></li>
-                            <li><strong>Apple Speculoos</strong> <span>7,3 €</span><em>Compote de pomme maison, spéculoos émietté, lamelles de pommes fraîches.</em></li>
+                            <li><strong>Savoury Fruities</strong><em>Fraises fraîches, kiwi, lamelles de pommes fraîches, crème fouettée mascarpone maison, amandes grillées.</em></li>
+                            <li><strong>Sweet Banana</strong><em>Chocolat maison, Nutella ou caramel au beurre salé maison, banane, crème fouettée mascarpone maison, amandes grillées.</em></li>
+                            <li><strong>Apple Speculoos</strong><em>Compote de pomme maison, spéculoos émietté, lamelles de pommes fraîches.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="crepes" data-nav="crepes" style="--c:#C2185B">
                         <h3>Crêpes &amp; pancakes sucrés</h3>
                         <ul>
-                            <li><strong>Beurre sucre</strong> <span>3,6 €</span></li>
-                            <li><strong>Citron pressé, confiture de fraises ou d'abricots</strong> <span>4,2 €</span></li>
-                            <li><strong>Chocolat maison ou Nutella</strong> <span>4,2 €</span></li>
-                            <li><strong>Miel, caramel au beurre salé maison ou spéculoos</strong> <span>4,4 €</span></li>
-                            <li><strong>Crème de marron, frangipane maison, compote de pomme maison, chocolat blanc ou beurre au bourbon</strong> <span>4,2 €</span></li>
-                            <li><strong>Mi-choco</strong> <span>6,4 €</span><em>Crêpe en chocolat, caramel beurre salé maison, chocolat blanc.</em></li>
-                            <li><strong>Mi-cuit maison</strong> <span>7,6 €</span><em>Chocolat maison, boule de glace vanille, caramel maison, amandes.</em></li>
+                            <li><strong>Beurre sucre</strong><em>Nature ou citron frais pressé.</em></li>
+                            <li><strong>Gourmandes</strong><em>Confiture de fraise, Nutella, chocolat maison, miel, caramel beurre salé maison, spéculoos, crème de marron, frangipane maison, compote de pomme maison ou chocolat blanc.</em></li>
+                            <li><strong>Mi-Choco</strong><em>Crêpe au chocolat, caramel beurre salé maison, chocolat blanc.</em></li>
+                            <li><strong>Mi-Cuit maison</strong><em>Crêpe, boule de glace vanille, caramel au beurre salé maison, amandes.</em></li>
                         </ul>
+                        <p>Supplément chantilly ou boule de glace.</p>
                     </div>
 
                     <div class="menu-cat" id="flambees" data-nav="crepes" style="--c:#C2185B">
                         <h3>Crêpes flambées</h3>
                         <ul>
-                            <li><strong>Suzette</strong> <span>7,6 €</span><em>Beurre, sucre, flambée au Grand Marnier.</em></li>
-                            <li><strong>Martiniquaise</strong> <span>8,2 €</span><em>Caramel au beurre salé maison, banane, coco, flambée au rhum ambré.</em></li>
-                            <li><strong>Plougastel</strong> <span>8,6 €</span><em>Fraises fraîches, confiture de fraise, flambée au Grand Marnier.</em></li>
-                            <li><strong>Saint-Louis</strong> <span>8,6 €</span><em>Poire, chocolat maison, flambée au noyau de Poissy.</em></li>
+                            <li><strong>Suzette</strong><em>Beurre, sucre, flambée au Grand Marnier.</em></li>
+                            <li><strong>Martiniquaise</strong><em>Caramel au beurre salé maison, banane, coco, flambée au rhum ambré.</em></li>
+                            <li><strong>Plougastel</strong><em>Fraises fraîches, confiture de fraise, flambée au Grand Marnier.</em></li>
+                            <li><strong>Saint-Louis</strong><em>Poire, chocolat maison, flambée au noyau de Poissy.</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-cat" id="cafes-gourmands" data-nav="crepes" style="--c:#C2185B">
+                        <h3>Cafés gourmands</h3>
+                        <ul>
+                            <li><strong>Duo gourmand</strong><em>1 expresso + 1 mini-pancake Nutella, caramel ou chocolat + 1 mini-pancake beurre sucre citron.</em></li>
+                            <li><strong>Trio gourmand</strong><em>1 expresso + 1 mini-pancake caramel au beurre salé et mi-cuit au chocolat maison + 1 mini-pancake banane et Nutella, caramel ou chocolat + 1 mini-pancake beurre sucre citron.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="glaces" data-nav="glaces" style="--c:#C2185B">
-                        <h3>Glaces &amp; cafés gourmands</h3>
+                        <h3>Glaces</h3>
                         <ul>
-                            <li><strong>1 boule / 2 boules</strong> <span>3,6 € / 4,7 €</span><em>Caramel au beurre salé, vanille, chocolat, sorbet fraise, citron ou noix de coco, chantilly maison.</em></li>
-                            <li><strong>Dame blanche</strong> <span>5,9 €</span></li>
-                            <li><strong>Belle Hélène</strong> <span>6,6 €</span></li>
-                            <li><strong>Fruitière</strong> <span>6,9 €</span></li>
-                            <li><strong>Banana split</strong> <span>7,6 €</span></li>
-                            <li><strong>Colonel</strong> <span>8,2 €</span></li>
-                            <li><strong>Duo café gourmand</strong> <span>6,4 €</span><em>1 expresso + 2 mini-pancakes.</em></li>
-                            <li><strong>Trio café gourmand</strong> <span>8,6 €</span><em>1 expresso + 3 mini-pancakes.</em></li>
+                            <li><strong>1 ou 2 boules</strong><em>Caramel au beurre salé, vanille, chocolat, sorbet fraise, citron ou noix de coco. Toutes nos boules sont servies avec de la chantilly.</em></li>
+                            <li><strong>Dame blanche</strong><em>Deux boules vanille, chocolat chaud maison, chantilly, amandes grillées.</em></li>
+                            <li><strong>Belle Hélène</strong><em>Deux boules vanille, morceaux de poire, chocolat chaud maison, chantilly maison, amandes grillées.</em></li>
+                            <li><strong>Fruitière</strong><em>Sorbet fraise et citron, fraises fraîches, chantilly, amandes grillées.</em></li>
+                            <li><strong>Banana split</strong><em>Une boule vanille, chocolat et fraise, banane, amandes grillées, chocolat chaud maison, chantilly.</em></li>
+                            <li><strong>Colonel</strong><em>Deux boules sorbet citron, rondelle de citron, vodka, chantilly.</em></li>
                         </ul>
                     </div>
 
                     <div class="menu-cat" id="boissons" data-nav="boissons" style="--c:#0E7C86">
-                        <h3>Bar &amp; boissons</h3>
-                        <p>Cidres bouchés du Val de Rance (doux, brut, rosé), bières (Superbock, Grimbergen, Duchesse Anne…), vins rouges, rosés et blancs, cocktails (Spritz breton, mojito, caipirinha, Moscow mule…), mocktails, citronnade et jus d'orange pressés maison, cafés, chocolat chaud et infusions.</p>
+                        <h3>Cocktails</h3>
+                        <ul>
+                            <li><strong>Moscow Mule</strong><em>Ginger beer, vodka, jus de citron, glace pilée.</em></li>
+                            <li><strong>Mojito &amp; Mojito fruit</strong><em>Rhum cubain, citron frais, cassonade, menthe fraîche, sucre de canne, limonade. Version fruit : fraise, mangue ou ananas.</em></li>
+                            <li><strong>Ultra Violet Mojito</strong><em>Citron vert, sirop de violette, sucre de canne, rhum, jus de cranberry.</em></li>
+                            <li><strong>Caipirinha &amp; Caipirinha fruit</strong><em>Cachaça, citron frais pressé, sucre de canne. Version fruit : fraise, pomme, mangue ou ananas.</em></li>
+                            <li><strong>Aperol Spritz</strong><em>Champagne, Apérol, orange.</em></li>
+                            <li><strong>Spritz breton</strong><em>Cidre, Apérol, orange.</em></li>
+                            <li><strong>Sex on the Beach</strong><em>Vodka, sirop de melon, Chambord, jus d'ananas, jus de cranberry.</em></li>
+                            <li><strong>Mango Colada</strong><em>Jus de mangue, purée de coco, rhum.</em></li>
+                            <li><strong>Cosmos</strong><em>Vodka, Cointreau, jus de citron vert, jus de cranberry.</em></li>
+                            <li><strong>Irish Coffee</strong><em>Café, whisky, sirop de sucre de canne, chantilly.</em></li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Paper menu -->
-                <div class="mt-14 grid gap-4 sm:grid-cols-2">
-                    <a href="/carte.pdf" target="_blank" rel="noopener" class="paper-menu">
-                        <img src="/img/carte-creperie-de-la-gare-galettes-crepes-800.webp"
-                             srcset="/img/carte-creperie-de-la-gare-galettes-crepes-800.webp 800w, /img/carte-creperie-de-la-gare-galettes-crepes-1600.webp 1600w"
-                             sizes="(min-width: 640px) 560px, 100vw"
-                             width="800" height="565" loading="lazy"
-                             alt="Carte papier des galettes, salades, crêpes, pancakes et glaces de La Crêperie de la Gare">
-                        <span>Carte des plats et desserts (PDF)</span>
-                    </a>
-                    <a href="/carte.pdf" target="_blank" rel="noopener" class="paper-menu">
-                        <img src="/img/carte-creperie-de-la-gare-boissons-800.webp"
-                             srcset="/img/carte-creperie-de-la-gare-boissons-800.webp 800w, /img/carte-creperie-de-la-gare-boissons-1600.webp 1600w"
-                             sizes="(min-width: 640px) 560px, 100vw"
-                             width="800" height="564" loading="lazy"
-                             alt="Carte papier des boissons : vins, bières, cidres, cocktails, mocktails et boissons chaudes">
-                        <span>Carte des boissons (PDF)</span>
-                    </a>
+                    <div class="menu-cat" id="mocktails" data-nav="boissons" style="--c:#0E7C86">
+                        <h3>Mocktails</h3>
+                        <ul>
+                            <li><strong>Virgin Mojito &amp; Virgin Mojito fruit</strong><em>Citron frais, cassonade, menthe fraîche, sucre de canne, limonade. Version fruit : fraise, mangue ou ananas.</em></li>
+                            <li><strong>Virgin Caipirinha &amp; Virgin Caipirinha fruit</strong><em>Citron frais pressé, sucre de canne. Version fruit : fraise, mangue ou ananas.</em></li>
+                            <li><strong>Virgin Sex on the Beach</strong><em>Sirop de melon, jus d'ananas, jus de cranberry.</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-cat" id="bar" data-nav="boissons" style="--c:#0E7C86">
+                        <h3>Bar &amp; boissons</h3>
+                        <ul>
+                            <li><strong>Vins</strong><em>Rouges : Chinon, Cuvée Alice, Grand Ricombre. Blancs : Vinho Verde, Chardonnay, Monbazillac, Maouries. Rosés : rosé de Loire, Golf de Saint-Tropez, Saint-Julien.</em></li>
+                            <li><strong>Bières</strong><em>Super Bock, Grimbergen, Monaco, Brewdog Punk IPA, Blanche Felsgold, panaché, demi-pêche, ginger beer sans alcool.</em></li>
+                            <li><strong>Cidres</strong><em>Cidres bouchés du Val de Rance (Bretagne, IGP), brut ou doux.</em></li>
+                            <li><strong>Apéritifs &amp; digestifs</strong><em>Ricard, Martini, kir, kir breton, porto, Baileys, Get 27, vodkas, whiskies (dont Nikka), rhums Diplomatico et Don Papa, cognac, calvados, poire Williams.</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-cat" id="barista" data-nav="boissons" style="--c:#0E7C86">
+                        <h3>Carte barista &amp; softs</h3>
+                        <ul>
+                            <li><strong>Cafés &amp; boissons chaudes</strong><em>Espresso, déca, macchiato, américano, cappuccino, caffè latte, mocha, caramel macchiato, chocolat viennois, thés (menthe, citron, vert, earl grey, Ceylan, verveine).</em></li>
+                            <li><strong>Frappuccinos, milkshakes &amp; smoothie</strong><em>Frappuccino chocolat, caramel ou coffee, milkshakes banane chocolat, vanille ou fraise, smoothie banane.</em></li>
+                            <li><strong>Boissons fraîches</strong><em>Jus d'orange pressé maison, citronnade maison (nature ou au Perrier), thé glacé maison, sodas, jus de fruits, limonade, diabolo, sirop à l'eau, eaux plates et gazeuses.</em></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
