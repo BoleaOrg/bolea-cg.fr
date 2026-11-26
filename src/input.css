@@ -130,15 +130,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
     line-height: 1;
 }
 .formule-desc { margin-top: 0.75rem; font-size: 1.05rem; line-height: 1.4; }
-.formule-meta { margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.85; }
-.formule-price {
-    margin-top: auto;
-    padding-top: 1.25rem;
-    font-family: "Big Shoulders Display", Impact, sans-serif;
-    font-weight: 800;
-    font-size: 2.5rem;
-    line-height: 1;
-}
+.formule-meta { margin-top: auto; padding-top: 0.75rem; font-size: 0.9rem; opacity: 0.85; }
 
 /* ---------- Text menu ---------- */
 .menu-text {
@@ -175,7 +167,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
 }
 .menu-cat li:first-child { border-top: 0; }
 .menu-cat li strong { font-weight: 600; flex: 1 1 60%; }
-.menu-cat li span { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .menu-cat li em {
     flex-basis: 100%;
     font-style: normal;
@@ -184,17 +175,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
     color: #5A6170;
 }
 .menu-cat p { color: #3D4452; line-height: 1.5; padding-bottom: 0.75rem; }
-
-.paper-menu {
-    display: block;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #E6E9EE;
-}
-.paper-menu img { width: 100%; height: auto; display: block; }
-.paper-menu span { display: block; padding: 0.85rem 1rem; font-weight: 600; }
-.paper-menu:hover span { text-decoration: underline; }
 
 /* ---------- Rating ---------- */
 .rating {
